@@ -1,21 +1,33 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pruebapreexamen;
 
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
 /**
- *
- * @author JULSSMECK
+ * Nombre de la Clase: PruebaPreExamen
+ * Fecha:18-04-18
+ * Version: 1.0
+ * CopyRight: JulioMenjivar
+ * @author JulioMenjivar
  */
 public class PruebaPreExamen {
-
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        //variables 
+        String nombre[] = new String[999];
+        int edad[] = new int[999];
+        
+        //contadores y acumuladores
+        int menu=0;
+        
+        Scanner leer = new Scanner(System.in);
+        
+        System.out.println("Menu: \n\n1.-INGRESAR\n2.-MOSTRAR");
+        menu = leer.nextInt();
+        
+         System.out.println("menu: "+menu);
+        
     }
     
 }
