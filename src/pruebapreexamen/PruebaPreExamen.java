@@ -25,7 +25,7 @@ public class PruebaPreExamen {
         
         System.out.println("Menu: \n\n1.-INGRESAR\n2.-MOSTRAR");
         menu = leer.nextInt();
-        
+        //Añadido desde GitHub
          System.out.println("menu: "+menu);
         
     }
