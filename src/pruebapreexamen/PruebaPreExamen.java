@@ -1,13 +1,12 @@
 
 package pruebapreexamen;
 
-import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 /**
  * Nombre de la Clase: PruebaPreExamen
  * Fecha:18-04-18
- * Version: 3.0
+ * Version: 4.0
  * CopyRight: JulioMenjivar
  * @author JulioMenjivar
  */
@@ -20,27 +19,37 @@ public class PruebaPreExamen {
         
         //contadores y acumuladores
         int menu=0;
+        int numIngre=0;
+        String Historial="";
         
-        Scanner leer = new Scanner(System.in);
-        
-         do{
-            System.out.println("Menu: \n\n1.-INGRESAR\n2.-MOSTRAR\n-1.-SALIR");
-            menu = leer.nextInt();
+        do{
+            menu = Integer.parseInt(JOptionPane.showInputDialog("Menu:\n1.-INGRESAR\n2.-MOSTRAR\n3.-SALIR\n"));
              
             //Añadido desde GitHub
-           switch(menu){
-               case 1:
-                   
-                   break;
-               case 2:
-                   
-                   break;
-           }
-            
-            
-            
-         }while(menu!=-1);
+                switch(menu){
+                    case 1:
+                        nombre[numIngre] = JOptionPane.showInputDialog("Ingrese el nombre");
+                        edad[numIngre] = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad"));
+                        JOptionPane.showMessageDialog(null, "Ingresado Correctamente","Atencion",1);
+                        Historial = Historial+"\nRegistro N°"+(numIngre+1)+
+                                    "\nNombre: "+nombre[numIngre]+
+                                    "\nEdad: "+edad[numIngre];
+                        numIngre++;
+                        break;
+                    case 2:
+                        JOptionPane.showMessageDialog(null, "HISTORIAL","Atencion",1);
+                        for(int i=0; i<numIngre; i++){
+                             JOptionPane.showMessageDialog(null, "\nRegistro N°"+(i+1)+
+                                   "\nNombre: "+nombre[i]+
+                                   "\nEdad: "+edad[i],"Atencion",1);
+                        }
+                        break;
+                    default:
+                        JOptionPane.showMessageDialog(null, "Ingrese una opcion habilitada","Atencion",0);
+                        break;    
+                }
+        }while(menu!=3); //Fin del Do  
         
-    }
+    }//Fin del Main
     
-}
+}//Fin de la Clase
